@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#303F9F</item>
+    </style>
+
+    <!--Title of app-->
+    <style name="Header">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name ="android:layout_height">wrap_content</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name ="android:text">molecular geeks</item>
+        <item name="android:textColor">#303F9F</item>
+    </style>
+    <!--Questions style-->
+    <style name="TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#303F9F</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--Buttons style-->
+    <style name="Buttons">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#131010</item>
+    </style>
+</resources>

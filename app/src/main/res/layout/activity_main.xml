@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradients"
+    android:fillViewport="true"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/Header"
+            style="@style/Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:hint="Please enter your name"
+            android:inputType="textMultiLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Header" />
+
+        <TextView
+            android:id="@+id/Question1"
+            style="@style/TextView"
+            android:text="Q1: What process explains the flow of DNA to proteins?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Name" />
+
+        <EditText
+            android:id="@+id/Q1Answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:hint="Enter answer (not case-sensitive)"
+            android:inputType="textMultiLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Question1" />
+
+        <TextView
+            android:id="@+id/Question2"
+            style="@style/TextView"
+            android:layout_marginTop="8dp"
+            android:text="Q2: Which below is a double-stranded helix structure?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Q1Answer" />
+
+        <RadioGroup
+            android:id="@+id/RG1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Question2">
+
+            <RadioButton
+                android:id="@+id/DNA"
+                style="@style/Buttons"
+                android:onClick="RadioGroup1"
+                android:text="DNA" />
+
+            <RadioButton
+                android:id="@+id/Lysosome"
+                style="@style/Buttons"
+                android:layout_marginLeft="0dp"
+                android:onClick="RadioGroup1"
+                android:text="Lysosome" />
+
+            <RadioButton
+                android:id="@+id/Proteins"
+                style="@style/Buttons"
+                android:onClick="RadioGroup1"
+                android:text="Proteins" />
+
+            <RadioButton
+                android:id="@+id/RNA"
+                style="@style/Buttons"
+                android:layout_marginLeft="0dp"
+                android:onClick="RadioGroup1"
+                android:text="RNA" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/Question3"
+            style="@style/TextView"
+            android:layout_marginTop="8dp"
+            android:text="Q3: Which below are macromolecules (check all that apply)?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/RG1" />
+
+        <CheckBox
+            android:id="@+id/Check1"
+            style="@style/Buttons"
+            android:text="Carbohydrates"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Question3" />
+
+        <CheckBox
+            android:id="@+id/Check2"
+            style="@style/Buttons"
+            android:text="Lipids"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Check1" />
+
+        <CheckBox
+            android:id="@+id/Check3"
+            style="@style/Buttons"
+            android:text="Proteins"
+            app:layout_constraintLeft_toRightOf="@id/Check1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Question3" />
+
+        <CheckBox
+            android:id="@+id/Check4"
+            style="@style/Buttons"
+            android:layout_marginLeft="87dp"
+            android:text="Nucleic acids"
+            app:layout_constraintLeft_toRightOf="@id/Check2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Check3" />
+
+        <TextView
+            android:id="@+id/Question4"
+            style="@style/TextView"
+            android:layout_marginTop="8dp"
+            android:text="Q4: .....is a membrane-bound organelle that contains genetic material (DNA) of eukaryotic organisms."
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Check4" />
+
+        <EditText
+            android:id="@+id/Q4Answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:hint="Enter answer (not case-sensitive)"
+            android:inputType="textMultiLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Question4" />
+
+        <TextView
+            android:id="@+id/Question5"
+            style="@style/TextView"
+            android:layout_marginTop="8dp"
+            android:text="Q5: Who received the Noble Prize in Chemistry in 1993 for inventing PCR?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Q4Answer" />
+
+        <RadioGroup
+            android:id="@+id/RG2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Question5">
+
+            <RadioButton
+                android:id="@+id/D.Baltimore"
+                style="@style/Buttons"
+                android:onClick="RadioGroup2"
+                android:text="David Baltimore" />
+
+            <RadioButton
+                android:id="@+id/K.Mullis"
+                style="@style/Buttons"
+                android:layout_marginLeft="0dp"
+                android:onClick="RadioGroup2"
+                android:text="Kary Mullis" />
+
+            <RadioButton
+                android:id="@+id/R.Weinberg"
+                style="@style/Buttons"
+                android:onClick="RadioGroup2"
+                android:text="Robert Weinberg" />
+
+            <RadioButton
+                android:id="@+id/J.Nash"
+                style="@style/Buttons"
+                android:layout_marginLeft="0dp"
+                android:onClick="RadioGroup2"
+                android:text="John Nash" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitQuiz"
+            android:text="submit quiz"
+            android:textAllCaps="true"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/Summary"
+            style="@style/TextView"
+            android:layout_marginTop="8dp"
+            android:text="Answer Key:"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RG2" />
+
+        <TextView
+            android:id="@+id/Results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="#0F0E0E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/Submit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Summary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
